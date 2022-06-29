@@ -1,0 +1,19 @@
+1.自动采集影视资源
+2.在线播放功能
+3.搜索全网资源功能
+4.增加卫视在线同步直播
+5.无需数据库
+对接资源站点：hzyb.hk 做到实时更新，推荐配置：php7.1
+
+伪静态规则：
+RewriteEngine On
+RewriteRule ^list/?([0-9]+)?/?$ index.php?id=$1
+RewriteRule ^play/?([0-9]+)?/?$ lib/play.php?id=$1
+RewriteRule ^search/([^/]+)/?$ lib/search.php?key=$1
+RewriteRule ^zhibo.html lib/zhibo.php
+RewriteRule ^password.html lib/password.php
+
+这可能是初始版本，目前只能采集Mp4，网站信息在config/config.php修改
+
+围观地址：http://1yu.cc
+

@@ -1,0 +1,4 @@
+<?php
+//000000000030
+ exit();?>
+a:4:{s:4:"code";i:1;s:3:"msg";s:12:"数据列表";s:5:"total";N;s:4:"list";a:1:{i:0;a:18:{s:7:"type_id";i:5;s:9:"type_name";s:6:"资讯";s:7:"type_en";s:5:"zixun";s:9:"type_sort";i:5;s:8:"type_mid";i:2;s:8:"type_pid";i:0;s:11:"type_status";i:1;s:8:"type_tpl";s:9:"type.html";s:13:"type_tpl_list";s:9:"show.html";s:15:"type_tpl_detail";s:11:"detail.html";s:13:"type_tpl_play";s:0:"";s:13:"type_tpl_down";s:0:"";s:8:"type_key";s:44:"最新影视资讯,电影资讯,娱乐资讯";s:8:"type_des";s:76:"本站提供最新电影,电视剧,综艺,动漫的资讯信息,一览无遗";s:10:"type_title";s:25:"最新资讯-推荐资讯";s:10:"type_union";s:0:"";s:11:"type_extend";a:8:{s:5:"class";s:0:"";s:4:"area";s:0:"";s:4:"lang";s:0:"";s:4:"year";s:0:"";s:4:"star";s:0:"";s:8:"director";s:0:"";s:5:"state";s:0:"";s:7:"version";s:0:"";}s:8:"childids";N;}}}

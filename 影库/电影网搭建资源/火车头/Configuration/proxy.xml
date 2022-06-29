@@ -1,0 +1,19 @@
+<Proxy>
+  <ListenPort>6666</ListenPort>
+  <NetConnectName>
+  </NetConnectName>
+  <ValidateProxy2Url>http://www.baidu.com/</ValidateProxy2Url>
+  <ValidateProxy2RetrunString>&lt;title&gt;百度一下，你就知道</ValidateProxy2RetrunString>
+  <ValidateTimeOut>5</ValidateTimeOut>
+  <IsOrderOrRandomGetProxys>0</IsOrderOrRandomGetProxys>
+  <IsADSLReconnect>0</IsADSLReconnect>
+  <IsADSLReconnect_IntervalOrContainString>0</IsADSLReconnect_IntervalOrContainString>
+  <ReconnectIntervalMinute>90</ReconnectIntervalMinute>
+  <ReconnectIfContainString>
+  </ReconnectIfContainString>
+  <SampleProxySite>
+  </SampleProxySite>
+  <Level2Proxys>
+    <ProxyItem Type="0" IP="124.205.178.62" Port="80" UserName="" PassWord="" Domain="" IsValidate="1" />
+  </Level2Proxys>
+</Proxy>

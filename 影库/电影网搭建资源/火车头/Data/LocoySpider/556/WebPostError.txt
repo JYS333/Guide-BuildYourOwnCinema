@@ -1,0 +1,118 @@
+ID:7
+网址:http://www.qhccoo.cn/news/local/3382082.html
+Header:HTTP/1.1 500 Internal Server Error
+Cache-Control:private
+Content-Length:5719
+Content-Type:text/html; charset=utf-8
+Server:Microsoft-IIS/7.5
+X-AspNet-Version:4.0.30319
+X-Powered-By:ASP.NET
+Date:Mon, 22 Dec 2014 02:09:26 GMT
+
+源代码:<html>
+    <head>
+        <title>The remote server returned an error: (502) Bad Gateway.</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>The remote server returned an error: (502) Bad Gateway.</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>执行当前 Web 请求期间，出现未经处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。
+
+            <br><br>
+
+            <b> 异常详细信息: </b>System.Net.WebException: The remote server returned an error: (502) Bad Gateway.<br><br>
+
+            <b>源错误:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+执行当前 Web 请求期间生成了未经处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>堆栈跟踪:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[WebException: The remote server returned an error: (502) Bad Gateway.]
+   System.Net.HttpWebRequest.GetResponse() +6038659
+   Util.Cls_SiteBase.SaveRemotePhoto(String O1l01l01, String O1lllO1l00OOl, Int32 O11O1, Int32 O11O1l) +101
+   Util.Cls_SiteBase.LocalFileUrl(String O00Ol00Olll, Boolean Ol0l1l0l, String OOlll1001O01O, String Oll0ll11, Boolean OO0O11, Int32 O0011, Int32 OOl000) +526
+   Util.Cls_SiteBase.ProcessRemotePhotos(String OOO1l1011Ol, Boolean O1001000, String O01lOl1, String OOO1111l, String O0O011, Boolean Ol0O11, Int32 O110O, Int32 O01011) +1212
+   Admin_news.Ol0O0OO() +3169
+   Admin_news.Page_Load(Object OOOO1O, EventArgs O) +380
+   System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e) +14
+   System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e) +35
+   System.Web.UI.Control.OnLoad(EventArgs e) +91
+   System.Web.UI.Control.LoadRecursive() +74
+   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +2207
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b>&nbsp;Microsoft .NET Framework 版本:4.0.30319; ASP.NET 版本:4.0.30319.1
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[WebException]: The remote server returned an error: (502) Bad Gateway.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Util.Cls_SiteBase.SaveRemotePhoto(String O1l01l01, String O1lllO1l00OOl, Int32 O11O1, Int32 O11O1l)
+   at Util.Cls_SiteBase.LocalFileUrl(String O00Ol00Olll, Boolean Ol0l1l0l, String OOlll1001O01O, String Oll0ll11, Boolean OO0O11, Int32 O0011, Int32 OOl000)
+   at Util.Cls_SiteBase.ProcessRemotePhotos(String OOO1l1011Ol, Boolean O1001000, String O01lOl1, String OOO1111l, String O0O011, Boolean Ol0O11, Int32 O110O, Int32 O01011)
+   at Admin_news.Ol0O0OO()
+   at Admin_news.Page_Load(Object OOOO1O, EventArgs O)
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+[HttpUnhandledException]: Exception of type &#39;System.Web.HttpUnhandledException&#39; was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mh_admin_news_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--><!-- 
+此错误页可能包含敏感信息，因为 ASP.NET 通过 &lt;customErrors mode="Off"/&gt; 被配置为显示详细错误消息。请考虑在生产环境中使用 &lt;customErrors mode="On"/&gt; 或 &lt;customErrors mode="RemoteOnly"/&gt;。-->
+========分隔线=======

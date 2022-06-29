@@ -1,0 +1,499 @@
+
+========全局标签=======
+{$maccms.site_name}网站名称
+{$maccms.site_url}网站url
+{$maccms.site_wapurl} wap网站url
+{$maccms.site_keywords}网站关键字
+{$maccms.site_description}网站描述
+{$maccms.site_icp}备案号
+{$maccms.site_qq}站长qq
+{$maccms.site_email}站长email
+{$maccms.site_tj}统计代码
+{$maccms.site_status}网站状态1开启0关闭
+{$maccms.site_close_tip}网站关闭提示信息
+{$maccms.path}网站目录
+{$maccms.path_tpl}当前模板目录
+{$maccms.search_hot}       热门搜索词
+{$maccms.mid}模块id，1视频2文章3专题
+{$maccms.aid}当前系统页面id
+首页1
+地图2
+rss3
+留言本4
+评论5
+自定义页面6
+
+视频首页10
+文章首页20
+专题首页30
+
+视频分类页11
+视频分类筛选12
+视频搜索13
+视频详情14
+视频播放15
+视频下载16
+
+文章分类21
+文章分类筛选22
+文章搜索23
+文章详情24
+
+专题详情31
+
+
+=======分类列表标签=======
+order排列顺序desc倒序，asc正序
+by排序依据
+start从第几条开始
+num获取条数
+ids指定分类parent获取一级分诶；child获取子分类；1,2,3一组指定ID；
+flag视频=vod文章=art
+{maccms:type num="10" order="asc" by="sort" ids="all"}
+   内部同下方，{$obj.改为{$vo.开头即可
+{/maccms:type}
+=======分类页独有标签=======
+{$obj.parent} 如果当前访问的是二级分类，这个是一级分类对象，也同样包含以下属性，如{$obj.parent.type_id}一级分类id
+
+{$obj.type_id}分类id
+{$obj.type_name}名称
+{$obj.type_enname}别名
+{$obj.type_sort}排序号
+{$obj.type_mid}所属模块
+{$obj.type_pid}上级id
+{$obj.type_status}状态1开启0关闭
+{$obj.type_tpl}分类页模板
+{$obj.type_tpl_list}筛选页模板
+{$obj.type_tpl_detail}详情页模板
+{$obj.type_tpl_play}播放页模板
+{$obj.type_tpl_down}下载页模板
+{$obj.type_key}关键字
+{$obj.type_des}描述信息
+{$obj.type_title}标题
+{$obj.type_extend}扩展配置json
+{:mac_url_type($obj)} 分类链接
+
+=======专题列表标签=======
+order排列顺序desc倒序，asc正序
+by排序依据
+start从第几条开始
+num获取条数
+ids指定1,2,3一组指定ID；
+paging是否分页yes
+{maccms:topic num="10" paging="no" order="asc" by="sort" ids="all"}
+   内部同下方，{$obj.改为{$vo.开头即可
+{/maccms:topic}
+=======专题页独有标签=======
+{$obj.topic_id}专题id
+{$obj.topic_name}名称
+{$obj.topic_en}别名
+{$obj.topic_sub}副标
+{$obj.topic_status}状态
+{$obj.topic_sort}排序号
+{$obj.topic_letter}首字母
+{$obj.topic_color}高亮颜色
+{$obj.topic_tpl}模板文件
+{$obj.topic_type}扩展分类
+{$obj.topic_pic}图片
+{$obj.topic_pic_thumb}缩略图
+{$obj.topic_pic_slide}幻灯图
+{$obj.topic_key}seo关键字
+{$obj.topic_des}seo描述
+{$obj.topic_title}seo标题
+{$obj.topic_blurb}简介
+{$obj.topic_remarks}备注
+{$obj.topic_level}推荐值
+{$obj.topic_up}顶数
+{$obj.topic_down}踩数
+{$obj.topic_score}平均分
+{$obj.topic_score_all}总评分
+{$obj.topic_score_num}总评次
+{$obj.topic_hits}总点击
+{$obj.topic_hits_day}日点击
+{$obj.topic_hits_week}周点击
+{$obj.topic_hits_month}月点击
+{$obj.topic_time}更新时间
+{$obj.topic_time_add}添加时间
+{$obj.topic_content}详细介绍
+{$obj.topic_extend}扩展配置json
+{:mac_url_topic_detail($obj)} 专题详情页链接
+{:mac_url_topic_index()}  专题首页链接
+
+=======视频列表标签=======
+order排列顺序desc倒序，asc正序
+by排序依据
+start从第几条开始
+num获取条数
+ids指定1,2,3一组ID；
+type指定获取分类数据 all所有；1,2,3指定；
+class指定某扩展分类
+level指定推荐值
+area指定地区
+lang指定语言
+year指定年代
+paging是否分页yes
+pageurl分页地址
+
+{maccms:vod num="10" paging="no" type="all" order="asc" by="sort"}
+   内部同下方，{$obj.改为{$vo.开头即可
+{/maccms:vod}
+=======视频内容页独有标签=======
+{$obj.vod_id} 视频id
+{$obj.type_id} 分类id
+{$obj.type_id_1} 一级分类id
+{$obj.type} 视频分类对象，二级属性可参考分类
+{$obj.type_1} 一级分类对象，二级属性可参考分类
+{$obj.group_id} 用户组id
+{$obj.vod_name} 视频名
+{$obj.vod_sub} 副标题
+{$obj.vod_en} 别名
+{$obj.vod_status} 状态0未审1已审
+{$obj.vod_letter} 首字母
+{$obj.vod_color} 颜色
+{$obj.vod_tag} tags
+{$obj.vod_class} 扩展分类
+{$obj.vod_pic} 图片
+{$obj.vod_pic_thumb} 缩略图
+{$obj.vod_pic_slide} 幻灯图
+{$obj.vod_actor} 主演
+{$obj.vod_director} 导演
+{$obj.vod_writer}编剧
+{$obj.vod_blurb} 简介
+{$obj.vod_remarks} 备注
+{$obj.vod_pubdate}上映日期
+{$obj.vod_total} 总集数
+{$obj.vod_serial} 连载数
+{$obj.vod_tv} 上映电视台
+{$obj.vod_weekday} 节目周期
+{$obj.vod_area} 地区
+{$obj.vod_lang} 语言
+{$obj.vod_year} 年代
+{$obj.vod_version} 版本-dvd,hd,720p
+{$obj.vod_state} 资源类别-正片,预告片,花絮
+{$obj.vod_author} 编辑人员
+{$obj.vod_jumpurl} 跳转url
+{$obj.vod_tpl} 独立模板
+{$obj.vod_tpl_play} 独立播放页模板
+{$obj.vod_tpl_down} 独立下载页模板
+{$obj.vod_isend} 是否完结
+{$obj.vod_lock} 锁定1
+{$obj.vod_level} 推荐级别
+{$obj.vod_points_play} 点播付费
+{$obj.vod_points_down} 下载付费
+{$obj.vod_hits} 总点击量
+{$obj.vod_hits_day} 日点击量
+{$obj.vod_hits_week} 周点击量
+{$obj.vod_hits_month} 月点击量
+{$obj.vod_duration} 时长
+{$obj.vod_up} 顶数
+{$obj.vod_down} 踩数
+{$obj.vod_score} 平均分
+{$obj.vod_score_all} 总评分
+{$obj.vod_score_num} 评分次数
+{$obj.vod_time} 更新时间
+{$obj.vod_time_add} 添加时间
+{$obj.vod_time_hits} 点击时间
+{$obj.vod_time_make} 生成时间
+{$obj.vod_trysee} 试看时长分
+{$obj.vod_reurl} 来源地址
+{$obj.vod_rel_vod} 关联视频ids
+{$obj.vod_rel_art} 关联文章ids
+{$obj.vod_content} 详细介绍
+{$obj.vod_play_from} 播放组
+{$obj.vod_play_server} 播放服务器组
+{$obj.vod_play_note} 播放备注
+{$obj.vod_play_url} 播放地址
+{$obj.vod_down_from} 下载租
+{$obj.vod_down_server} 下载服务器组
+{$obj.vod_down_note} 下载备注
+{$obj.vod_down_url} 下载地址
+{:mac_url_vod_detail($obj)}  视频详情页链接
+
+=======视频播放地址和下载地址标签=======
+
+{maccms:foreach name="obj.vod_play_list" id="vo"}
+<div class="ui-box marg" id="playlist_1">
+    <div class="down-title">
+        <h2>{$vo.from}-在线播放</h2><span>[{$vo.player_info.tip}]</span>
+    </div>
+    <div class="video_list fn-clear">
+        {maccms:foreach name="vo.urls" id="vo2"}
+        <a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}" >{$vo2.name}</a>
+        {/maccms:foreach}
+    </div>
+</div>
+{/maccms:foreach}
+
+
+{maccms:foreach name="obj.vod_down_list" id="vo"}
+<div class="ui-box marg" id="downlist_1">
+    <div class="down-title">
+        <h2>{$vo.from}-下载</h2><span>[{$vo.player_info.tip}]</span>
+    </div>
+    <div class="video_list fn-clear">
+        {maccms:foreach name="vo.urls" id="vo2"}
+        <a href="{:mac_url_vod_down($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}" >{$vo2.name}</a>
+        {/maccms:foreach}
+    </div>
+</div>
+{/maccms:foreach}
+
+上边循环过程中，其中获取播放器详细信息的方法是
+{$vo.player_info.from} 编码
+{$vo.player_info.show} 名称
+{$vo.player_info.des} 备注
+{$vo.player_info.tip} 提示
+{$vo.player_info.sort} 排序
+{$vo.player_info.parse} 解析接口
+
+
+=======视频播放页独有标签=======
+{$param.sid} 当前播放组序号
+{$param.nid} 当前集数序号
+
+{$obj.player_info.link_next} 下一页地址，最后一页时此链接将当前页链接
+{$obj.player_info.link_pre} 上一页地址，第一页时此链接将当前页链接
+
+{$obj['vod_play_list'][$param['sid']]} 获取当前播放组数据
+{$obj['vod_play_list'][$param['sid']]['player_info']}  播放器信息
+{$obj['vod_play_list'][$param['sid']]['server_info']}  服务器组信息
+{$obj['vod_play_list'][$param['sid']]['url_count']} 总集数
+{$obj['vod_play_list'][$param['sid']]['urls']} 集数信息
+{$obj['vod_play_list'][$param['sid']]['urls'][$param['nid']]} 当前集数信息
+{$obj['vod_play_list'][$param['sid']]['urls'][$param['nid']]['name']} 当前集数名称
+{$obj['vod_play_list'][$param['sid']]['urls'][$param['nid']]['url']} 当前集数url
+
+下载页获取以上信息，请把vod_play_list改为vod_down_list，其他参数不变
+
+{$player_data} 播放数据
+{$player_js} 加载播放器
+=======获取与当前视频相关联视频和关联文章数据======
+<h2>与<strong>“{$obj.vod_name}”</strong>关联的视频</h2>
+<ul class="img-list dis">
+    {maccms:vod num="6" ids="'.$obj['vod_rel_vod'].'" order="desc" by="time"}
+        <li><a href="{:mac_url_vod_detail($vo)}" title="{$vo.vod_name}"><img src="{:mac_url_img($vo.vod_pic)}" alt="{$vo.vod_name}"/><h2>{$vo.vod_name}</h2><p></p><i>{$vo.vod_version}</i><em></em></a></li>
+    {/maccms:vod}
+</ul>
+<h2>与<strong>“{$obj.vod_name}”</strong>关联的文章</h2>
+<ul class="img-list dis">
+    {maccms:art num="6" ids="'.$obj['vod_rel_art'].'" order="desc" by="time"}
+        <li><a href="{:mac_url_art_detail($vo)}" title="{$vo.art_name}"><img src="{:mac_url_img($vo.art_pic)}" alt="{$vo.art_name}"/><h2>{$vo.art_name}</h2><p></p><i>{$vo.vod_from}</i><em></em></a></li>
+    {/maccms:art}
+</ul>
+
+
+=======文章列表标签=======
+order排列顺序desc倒序，asc正序
+by排序依据
+start从第几条开始
+num获取条数
+ids指定1,2,3一组ID；
+type指定获取分类数据 all所有；1,2,3指定；
+class指定某扩展分类
+level指定推荐值
+paging是否分页yes
+pageurl分页地址
+
+{maccms:art num="10" paging="no" type="all" order="asc" by="sort"}
+   内部同下方，{$obj.改为{$vo.开头即可
+{/maccms:art}
+=======文章内容页独有标签=======
+{$obj.art_id} 文章id
+{$obj.type_id} 分类id
+{$obj.type_id_1} 一级分类id
+{$obj.type} 视频分类对象，二级属性可参考分类
+{$obj.type_1} 一级分类对象，二级属性可参考分类
+{$obj.group_id} 用户组id
+{$obj.art_name} 标题
+{$obj.art_sub} 副标题
+{$obj.art_en} 别名
+{$obj.art_status} 状态0未审1已审
+{$obj.art_letter} 首字母
+{$obj.art_color} 颜色
+{$obj.art_from} 来源
+{$obj.art_author} 作者
+{$obj.art_tag} tags
+{$obj.art_class} 扩展分类
+{$obj.art_pic} 主图
+{$obj.art_pic_thumb} 缩略图
+{$obj.art_pic_slide} 幻灯图
+{$obj.art_blurb} 简介
+{$obj.art_remarks} 备注
+{$obj.art_jumpurl} 跳转url
+{$obj.art_tpl} 独立模板
+{$obj.art_level} 推荐等级
+{$obj.art_lock} 锁定
+{$obj.art_up} 顶数
+{$obj.art_down} 踩数
+{$obj.art_hits} 总点击量
+{$obj.art_hits_day} 日点击量
+{$obj.art_hits_week} 周点击量
+{$obj.art_hits_month} 月点击量
+{$obj.art_time} 更新时间
+{$obj.art_time_add} 添加时间
+{$obj.art_time_hits} 点击时间
+{$obj.art_time_make} 生成时间
+{$obj.art_score} 平均分
+{$obj.art_score_all} 总评分
+{$obj.art_score_num} 评分次数
+{$obj.art_rel_art} 关联文章
+{$obj.art_rel_vod} 关联视频
+{$obj.art_title} 页标题
+{$obj.art_note} 页备注
+{$obj.art_content} 页详细介绍
+{:mac_url_art_detail($obj)}  文章详情页链接
+
+
+=======获取与当前文章相关联视频和关联文章数据======
+<h2>与<strong>“{$obj.art_name}”</strong>关联的视频</h2>
+<ul class="img-list dis">
+    {maccms:vod num="6" ids="'.$obj['art_rel_vod'].'" order="desc" by="time"}
+        <li><a href="{:mac_url_vod_detail($vo)}" title="{$vo.vod_name}"><img src="{:mac_url_img($vo.vod_pic)}" alt="{$vo.vod_name}"/><h2>{$vo.vod_name}</h2><p></p><i>{$vo.vod_version}</i><em></em></a></li>
+    {/maccms:vod}
+</ul>
+<h2>与<strong>“{$obj.art_name}”</strong>关联的文章</h2>
+<ul class="img-list dis">
+    {maccms:art num="6" ids="'.$obj['art_rel_art'].'" order="desc" by="time"}
+        <li><a href="{:mac_url_art_detail($vo)}" title="{$vo.art_name}"><img src="{:mac_url_img($vo.art_pic)}" alt="{$vo.art_name}"/><h2>{$vo.art_name}</h2><p></p><i>{$vo.vod_from}</i><em></em></a></li>
+    {/maccms:art}
+</ul>
+
+
+=======分页内容标签=======
+分页代码可用在分类页、筛选页、搜索页、文章内容页、留言本、评论、专题首页等页面，使用前提是页面有包含paging='yes'获取分页数据的标签。
+其中包含隐藏参数pageurl=""，视频默认是vod/type，文章分页默认是art/type，分页时必须加入此参数以免分页出错！！！
+例如：{maccms:vod num="10" paging="yes" pageurl="vod/type"} {/maccms:vod}
+视频分类页是pageurl="vod/type"
+视频筛选页是pageurl="vod/show"
+视频搜索页是pageurl="vod/search"
+首页是pageurl="index/index"
+文章分类页是pageurl="art/type"
+文章筛选页是pageurl="art/show"
+文章搜索页是pageurl="art/search"
+
+<div class="mac_pages">
+    <div class="page_tip">共{$__PAGING__.record_total}条数据,当前{$__PAGING__.page_current}/{$__PAGING__.page_total}页</div>
+    <div class="page_info">
+        <a class="page_link" href="{$__PAGING__.page_url|mac_url_page=1}" title="首页">首页</a>
+        <a class="page_link" href="{$__PAGING__.page_url|mac_url_page=$__PAGING__.page_prev}" title="上一页">上一页</a>
+        {maccms:foreach name="$__PAGING__.page_num" id="num"}
+        {if condition="$__PAGING__['page_current'] eq $num"}
+        <a class="page_link page_current" href="javascript:;" title="第{$num}页">{$num}</a>
+        {else}
+        <a class="page_link" href="{$__PAGING__.page_url|mac_url_page=$num}" title="第{$num}页" >{$num}</a>
+        {/if}
+        {/maccms:foreach}
+        <a class="page_link" href="{$__PAGING__.page_url|mac_url_page=$__PAGING__.page_next}" title="下一页">下一页</a>
+        <a class="page_link" href="{$__PAGING__.page_url|mac_url_page=$__PAGING__.page_total}" title="尾页">尾页</a>
+
+        <input class="page_input" type="text" placeholder="页码"  id="page" autocomplete="off" style="width:40px">
+        <button class="page_btn mac_page_go" type="button" data-url="{$__PAGING__.page_url}" data-total="{$__PAGING__.page_total}" data-sp="{$__PAGING__.page_sp}" >GO</button>
+    </div>
+</div>
+
+=======非静态模式下，可获取到的当前登录用户的信息；用户中心里各个界面也可用以下参数{$obj.开头}=======
+{$user.user_id} 用户编号
+{$user.user_name} 登录名
+{$user.user_email} 邮箱
+{$user.user_qq}  QQ
+{$user.user_phone} 联系电话
+{$user.user_portrait}  头像
+{$user.user_points} 积分
+{$user.user_reg_time} 注册时间
+{$user.user_login_time} 登录时间
+{$user.user_login_ip} 登录ip
+{$user.user_last_login_time} 上次登录时间
+{$user.user_last_login_ip} 上次登录ip
+{$user.user_login_num} 登录次数
+{$user.user_end_time} vip截止期限
+{$user.group_id}用户组编号
+
+
+
+
+=======常用处理函数=======
+允许使用多个函数，都使用|分隔开
+
+{:mac_data_count(0,'all','vod')} 获取视频总数量
+{:mac_data_count(0,'today','vod')} 获取今日更新视频总数量
+
+{:mac_data_count(0,'all','art')} 获取文章总数量
+{:mac_data_count(0,'today','art')} 获取今日更新文章总数量
+
+{:mac_data_count(1,'all')} 获取某个分类下的数据总量，支持视频和文章,传入分类ID
+{:mac_data_count(1,'today')} 获取某个分类下的今日更新数据总量，支持视频和文章,传入分类ID
+
+{:mac_url('map/index')} 获取站内链接,参数代表 模块/页面
+
+{$vo.vod_pic|mac_url_img}  自动转换图片地址
+
+{$vo.vod_content|mac_substring=100}返回截取字符串100个字
+
+{$vo.vod_content|mac_filter_html}返回没有html代码的内容
+
+{$vo.actor|mac_url_create='actor','vod','search'}把,号相连的一串字符生成N个搜索链接,后2个参数可以不填写默认是生成vod模块搜索链接。 例子是创建演员搜索链接。支持演员、导演、tag、扩展分类等字段
+
+{$vo.vod_time|mac_day} 自动返回日期
+
+{$vo.vod_year|mac_default='未知'}如果字符串为空，则返回默认字符串
+
+{$user.user_login_ip|mac_long2ip}返回格式化ip地址
+
+
+=======常用JS处理函数=======一般用元素的class自动绑定处理事件========
+
+会员-收藏视频内容
+<a href="javascript:;" class="mac_ulog" data-type="2" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}">我要收藏</a>
+会员-收藏文章内容页
+<a href="javascript:;" class="mac_ulog" data-type="2" data-mid="{$maccms.mid}" data-id="{$obj.art_id}">我要收藏</a>
+会员-收藏专题内容页
+<a href="javascript:;" class="mac_ulog" data-type="2" data-mid="{$maccms.mid}" data-id="{$obj.topic_id}">我要收藏</a>
+
+以下内容一般放到body结尾之前，不用于显示，只用户记录信息。
+会员-文章浏览记录
+<span style="display:none" class="mac_ulog_set" alt="设置文章内容页浏览记录" data-type="1" data-mid="{$maccms.mid}" data-id="{$obj.art_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+
+会员-专题浏览记录
+<span style="display:none" class="mac_ulog_set" alt="设置专题内容页浏览记录" data-type="1" data-mid="{$maccms.mid}" data-id="{$obj.topic_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+
+会员-视频浏览记录
+<span style="display:none" class="mac_ulog_set" alt="设置内容页浏览记录" data-type="1" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+
+会员-视频播放记录
+<span style="display:none" class="mac_ulog_set" alt="设置视频播放记录" data-type="4" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+
+会员-视频下载记录
+<span style="display:none" class="mac_ulog_set" alt="设置视频播放记录" data-type="5" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+
+视频、文章、专题 顶和踩  通用
+<a class="digg_link" data-id="{$obj.vod_id}{$obj.art_id}{$obj.topic_id}" data-mid="{$maccms.mid}" data-type="up" href="javascript:;">
+  顶<em class="digg_num">{$obj.vod_up}{$obj.art_up}{$obj.topic_up}</em>
+</a>
+<a class="digg_link" data-id="{$vod_id}{$art_id}{$topic_id}" data-mid="{$maccms.mid}" data-type="down" href="javascript:;">
+  踩<em class="digg_num">{$obj.vod_down}{$obj.art_down}{$obj.topic_down}</em>
+</a>
+
+视频、文章、专题点击量显示  通用
+总点击量：<span class="mac_hits hits" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}{$obj.art_id}{$obj.topic_id}"" data-type="hits"></span>
+日点击量：<span class="mac_hits hits_day" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}{$obj.art_id}{$obj.topic_id}"" data-type="hits_day"></span>
+周点击量：<span class="mac_hits hits_week" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}{$obj.art_id}{$obj.topic_id}"" data-type="hits_week"></span>
+月点击量：<span class="mac_hits hits_month" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}{$obj.art_id}{$obj.topic_id}"" data-type="hits_month"></span>
+
+前台浏览历史记录调用
+<a href="javascript:;" class="mac_history">历史记录</a>
+
+在视频、文章、专题详情页面写入浏览历史记录
+<span style="display:none" class="mac_history_set" alt="设置视频历史记录" data-name="[{$obj.type.type_name}]{$obj.vod_name}" data-pic="{$obj.vod_pic|mac_url_img}"></span>
+<span style="display:none" class="mac_history_set" alt="设置文章历史记录" data-name="[{$obj.type.type_name}]{$obj.art_name}" data-pic="{$obj.art_pic|mac_url_img}"></span>
+<span style="display:none" class="mac_history_set" alt="设置专题历史记录" data-name="{$obj.topic_name}" data-pic="{$obj.topic_pic|mac_url_img}"></span>
+
+
+
+=======预留ajax数据接口，方便瀑布流加载=======
+参数
+mid:模块1视频2文章3专题
+limit:每页条数，支持10,20,30
+page:页码，最多不超过20页，防止非法采集
+接口地址是index.php/ajax/data.html?mid=1&page=1&limit=10
+
+

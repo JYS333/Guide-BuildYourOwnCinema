@@ -1,0 +1,20 @@
+<!-- 页头 -->
+<input type="checkbox" id="navSwitch">
+<header class="g_nav trans">
+    <ul class="g_wrap_p">
+        <li><a href="{$maccms.path}">首页</a></li>
+        {maccms:type ids="parent" order="asc" by="sort"}
+        <li><a href="{:mac_url_type($vo)}">{$vo.type_name}</a></li>
+        {/maccms:type}
+        <li><a href="{:mac_url('topic/index')}">影视专题</a></li>
+        <li><a href="{:mac_url('map/index')}">热门排行</a></li>
+    </ul>
+    <div class="g_wrap_p">
+        <div class="ui-search">
+            <form id="search" name="search" method="POST" action="{:mac_url('vod/search')}" onSubmit="return qrsearch();">
+                <input type="text" id="wd" name="wd" class="search-input" value="请输入影片名或演员名称" onfocus="if(this.value=='请输入影片名或演员名称'){this.value='';}" onblur="if(this.value==''){this.value='请输入影片名或演员名称';};" />
+                <input type="submit" id="searchbutton"  class="search-button" value="搜索" />
+            </form>
+        </div>
+        <div class="resou"><a href="搜索结果.html">长城</a> <a href="搜索结果.html">鬼吹灯之精绝古城</a> <a href="搜索结果.html">奇星记</a> <a href="搜索结果.html">西涯侠</a> <a href="搜索结果.html">武庚纪</a> <a href="搜索结果.html">血战钢锯岭</a> <a href="搜索结果.html">盗墓笔记</a> <a href="搜索结果.html">精灵王座</a> <a href="搜索结果.html">奇异博士</a></div></div>
+</header>

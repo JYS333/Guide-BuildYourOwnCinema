@@ -1,0 +1,6 @@
+﻿把文件放到application/admin/view/collect/ 下，覆盖原来的文件
+苹果cms  
+v10专用
+关于定时任务
+只要在宝塔里加上
+http://你的域名/api.php/timming/index.html 就好了

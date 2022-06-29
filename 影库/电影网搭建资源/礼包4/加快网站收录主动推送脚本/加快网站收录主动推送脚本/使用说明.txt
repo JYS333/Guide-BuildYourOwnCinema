@@ -1,0 +1,10 @@
+注意sm.php中：
+$api = 'http://data.zz.baidu.com/urls?site=www.winseo.cc&token=EbDE9SF2LPwqaiQR';
+修改为你自己站中的 百度站长工具 - 链接提交 - 自动提交 - 主动推送(实时) 接口调用地址
+
+
+
+使用说明：
+1.将sm.html和sm.php上传网站根目录;
+2.访问---你的域名/sm.html;
+3.然后输入你需要提交的url即可提交。
